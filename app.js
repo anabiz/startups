@@ -8,6 +8,7 @@ const addStartupRouter = require('./routes/addstartup/index');
 const getStartupRouter = require('./routes/getstartup/index');
 const deleteStartupRouter = require('./routes/deletestartup/index');
 const updateStartupRouter = require('./routes/updatestartup/index');
+const getStartupByIdRouter = require('./routes/getbyid/index');
 
 // const usersRouter = require('./routes/users');
 // const ticketRouter = require('./routes/ticket');
@@ -26,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/add', addStartupRouter);
 app.use('/delete', deleteStartupRouter);
-//app.use('/get:id', getbyidStartupRouter);
+app.use('/get', getStartupByIdRouter);
 app.use('/getall', getStartupRouter);
 app.use('/update', updateStartupRouter);
 

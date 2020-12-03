@@ -27,7 +27,16 @@ describe('Post Endpoints', () => {
            
         expect(res.statusCode).toEqual(200)
         expect(typeof res.body).toBe('object')
-        //expect(res.body).toHaveProperty('name',"id","startup")
+        expect(res.body[0]).toHaveProperty('name',"id","startup")
+    })
+
+    it('should get startup by id', async () => {
+        const res = await request(app)
+            .get('/get/1')
+           
+        expect(res.statusCode).toEqual(200)
+        expect(typeof res.body).toBe('object')
+        expect(res.body).toHaveProperty('name',"id","startup")
     })
 
 });

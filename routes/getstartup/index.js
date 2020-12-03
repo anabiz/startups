@@ -3,7 +3,7 @@ var router = express.Router();
 
 const  getStartup  = require("../../controller/getStartup");
 
-/* GET startup. */
+/* GET  all startups. */
 router.get('/', getStartup );
 
 
