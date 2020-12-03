@@ -8,7 +8,7 @@ const getStartupById = (req, res) => {
 
     const startup = Db.find(element => element.id == id);
 
-    return res.status(200).json(startup);
+    return res.status(200).json({nde:"opo"});
 }
 
 module.exports = getStartupById;
